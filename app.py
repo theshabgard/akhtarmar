@@ -12,7 +12,7 @@ minute = st.number_input("دقیقه‌ی تولد (میلادی)")
 latitude = st.number_input("عرض جغرافیایی محل تولد")
 longitude = st.number_input("طول جغرافیایی محل تولد")
 timezone = st.number_input("Timezone of Birth")
-function_list = ['horo_chart_image', 'birth_details', 'astro_details', 'ayanamsha']
+function_list = ['birth_details', 'astro_details']
 resource = st.sidebar.selectbox("لطفاً کارکرد مدنظر خود را وارد کنید", function_list)
 
 data = {
