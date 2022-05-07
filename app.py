@@ -3,6 +3,13 @@ import json
 import streamlit as st
 
 st.title('محسابه‌ی جزئیات اخترشناسانه‌ (وِدیک)')
+from PIL import Image
+import base64
+import plotly.offline as py
+
+image = Image.open('banner.jpg')
+st.image(image, caption='AkhtarMar')
+
 
 day = st.number_input("روز تولد (میلادی)")
 month = st.number_input("ماه تولد (میلادی)")
@@ -12,7 +19,7 @@ minute = st.number_input("دقیقه‌ی تولد (میلادی)")
 latitude = st.number_input("عرض جغرافیایی محل تولد")
 longitude = st.number_input("طول جغرافیایی محل تولد")
 timezone = st.number_input("Timezone of Birth")
-function_list = ['birth_details', 'astro_details']
+function_list = ['birth_details', 'astro_details', 'planets']
 resource = st.sidebar.selectbox("لطفاً کارکرد مدنظر خود را وارد کنید", function_list)
 
 data = {
