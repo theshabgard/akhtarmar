@@ -2,17 +2,19 @@ import sdk
 import json
 import streamlit as st
 
-st.title('Vedic Astrology App')
-day = st.number_input("Day of Birth")
-month = st.number_input("Month of Birth")
-year = st.number_input("Year of Birth")
-hour = st.number_input("Hour of Birth")
-minute = st.number_input("Minute of Birth")
-latitude = st.number_input("Latitude of Birth")
-longitude = st.number_input("Longitude of Birth")
-timezone = st.number_input("Timezone of Birth")
+st.title('محسابه‌ی جزئیات اخترشناسانه‌ (وِدیک)')
 
-resource = "astro_details"
+day = st.number_input("روز تولد (میلادی)")
+month = st.number_input("ماه تولد (میلادی)")
+year = st.number_input("سال تولد (میلادی)")
+hour = st.number_input("ساعت تولد (میلادی)")
+minute = st.number_input("دقیقه‌ی تولد (میلادی)")
+latitude = st.number_input("عرض جغرافیایی محل تولد")
+longitude = st.number_input("طول جغرافیایی محل تولد")
+timezone = st.number_input("Timezone of Birth")
+function_list = ['horo_chart_image', 'birth_details', 'astro_details', 'ayanamsha']
+resource = st.sidebar.selectbox("لطفاً کارکرد مدنظر خود را وارد کنید", function_list)
+
 data = {
     'date': day,
     'month': month,
