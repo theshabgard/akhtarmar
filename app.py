@@ -6,7 +6,7 @@ st.title('محسابه‌ی جزئیات اخترشناسانه‌ (وِدیک)'
 from PIL import Image
 import base64
 
-image = Image.open('banner.jpg')
+image = Image.open('image.jpg')
 st.image(image, caption='AkhtarMar')
 
 
