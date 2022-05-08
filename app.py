@@ -5,7 +5,6 @@ import streamlit as st
 st.title('محسابه‌ی جزئیات اخترشناسانه‌ (وِدیک)')
 from PIL import Image
 import base64
-import plotly.offline as py
 
 image = Image.open('banner.jpg')
 st.image(image, caption='AkhtarMar')
