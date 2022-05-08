@@ -18,7 +18,7 @@ minute = st.number_input("دقیقه‌ی تولد (میلادی)")
 latitude = st.number_input("عرض جغرافیایی محل تولد")
 longitude = st.number_input("طول جغرافیایی محل تولد")
 timezone = st.number_input("Timezone of Birth")
-function_list = ['birth_details', 'astro_details', 'planets']
+function_list = ['birth_details', 'astro_details', 'planets', 'horo_chart/:SUN', 'horo_chart/:D1', 'horo_chart_image/:D1']
 resource = st.sidebar.selectbox("لطفاً کارکرد مدنظر خود را وارد کنید", function_list)
 
 data = {
@@ -29,7 +29,7 @@ data = {
     'minute': minute,
     'latitude': latitude,
     'longitude': longitude,
-    'timezone': timezone
+    'timezone': timezone,
 }
 # instantiate VedicRishiClient class
 client = sdk.VRClient("619618", "181315b73871183a938f4c4b7aca89f5")
