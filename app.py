@@ -49,7 +49,7 @@ responseData = client.call(resource, data['date'], data['month'], data['year'], 
 loaded_json = json.loads(responseData.text)
 if resource == 'horo_chart_image/:D1':
   st.image(loaded_json, format="svg")
- else:
+else:
   st.write(loaded_json)
 
 print(loaded_json)  # <== prints json response.
